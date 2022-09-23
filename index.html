@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome and google fonts -->
+    link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+
+    <title>Daisy Game</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="intro">
+        <h1>The Daisy Game</h1>
+        <p>Help our industrious bee to land on as many flowers as possible!</p>
+        <p id="start">Click below to start!</p>
+    </div>
+    <div id="game-area">
+        <button id="button">Start!</button>
+        
+        <div id="field">
+            <div id="bee"></div>
+            <div id="daisy"></div>
+        </div>
+    </div>
+    <div id="scores">Score: <span id="score">0</span></div>
+    <div id="timer">Timer:  <span id="counter">60</span> seconds</div>
+</body>
+<script src="assets/js/script.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>
