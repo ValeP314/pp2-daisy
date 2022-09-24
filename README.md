@@ -1,108 +1,122 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Daisy Game
 
-Welcome ValeP314,
+The purpose of this project is to build a front-end site. The site should respond to the users' actions, allowing users to actively engage with data, alter the way the site displays the information to achieve their preferred goals. 
+I decided to create an interactive game, where a bee is allowed to land on flowers to collect the pollen. The collision between the bee and the flower will be generating points, shown in the final score at the bottom of the game-area. The game ends after 1 minute, set up with a timer embedded in JavaScript.
+This game is developed using HTML, CSS and JavaScript.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Project Inspiration
+The idea comes from one of my past work experiences, when I had the chance to study the bee's behaviour and also theis products from a chemical perspective.
+A bee can travel up to 30 Km to find the flowers that it likes most! Let's see how many flowers it will find in 1 minute!
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Wireframe
+The preliminary sketch of the website looked like this wireframe:
 
-## Gitpod Reminders
+![Wireframe](./assets/images/READMEimgs/wireframe.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Features
 
-`python3 -m http.server`
+### Existing Features
 
-A blue button should appear to click: _Make Public_,
+- __Introduction area__
 
-Another blue button should appear to click: _Open Browser_.
+  - This section contains a short introduction on the scope of the game. 
+  - It will be asked to the user to help our industrious bee to land on as many flowers as possible, in 1 minute.
+  - It also contains a button to start/restart the game.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+    ![Introduction area](./assets/images/...)
 
-A blue button should appear to click: _Make Public_,
+- __Game area__
 
-Another blue button should appear to click: _Open Browser_.
+  - The game area contains a field area and a button that will allow the bee to fly down. 
+  - This section has a background image to grab the attention of the users.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+    ![Game area](./assets/images/READMEimg/...)
 
-To log into the Heroku toolbelt CLI:
+- __Field area__
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+  - The fieald area is where the game takes place.
+  - This user will see the value of renting the premises, having the opportunity to see he main features that the accommodation will offer. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+    ![Field area](./assets/images/READMEimg/...)
 
-------
+- __Score area__
 
-## Release History
+  - This section, below the game area, will show the score.
+  - It will be visible on the screen all the time.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+    ![Score area](./assets/images/READMEimg/...)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- __Timer area__ 
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+  - The final section contai a timer, embedded in JavaScript.
+  - The timer will count down the seconds, from 60 to 0.
+  - The game will end after 60 seconds.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+    ![Timer area](./assets/images/READMEimg/...)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Features Left to Implement
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- Add poisonus flowers that will decrease your score if touched by the bee.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Testing 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- I tested this page in different browsers: Chrome, Edge, Safari.
+- The project is responsive, and it looks and works well on different browsers and screen sizes.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Validator Testing 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- HTML
+  - No errors were returned when passing through the official W3C validator:
+    - [Daisy Game](https://validator.w3.org/nu/...)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- CSS
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/...)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- Accessibility
+  - Performance, accessibility and best practices were assessed through Lighthouse in devtools and passed the testing with good scores.
+    ![Lighthouse](./assets/images/READMEimg/...)
 
-------
 
-## FAQ about the uptime script
+### Fixed Bugs
 
-**Why have you added this script?**
+- 
+- 
+- 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
+### Unfixed Bugs
+None
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+## Deployment
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the GitHub repository, navigate to the Settings tab.
+  - From the menu, select Pages.
+  - From the Branch section drop-down menu, select the Main Branch.
+  - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+  The live link can be found here - [DaisyGame](https://valep314.github.io...)
 
-**So….?**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+## Credits  
 
-**Can I opt out?**
+### Content 
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- The main structure and the README file are inspired to the Love Running and Love Maths projects.
+- The icon in the heading was taken from [Font Awesome](https://fontawesome.com/)
+- Inspiration on the coding for structure of the game came from this video from KnifeCircus [KnifeCircus](https://www.youtube.com/watch?v=bG2BmmYr9NQ)
+- [W3 School](https://www.w3schools.com/) was consulted regularly for tips on general coding, as well as [Stack Overflow] (https://stackoverflow.com/).
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+### Media
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- The [Bee photo](./assets/images/bee.png) on the field area is from Pixabay by RalfDesign: https://pixabay.com/images/id-5132049/ and it was slightly modified using Paint.
+- The [Daisy photo](./assets/images/daisy.png) on the field area is from Pixabay by OpenClipart-Vectors: https://pixabay.com/images/id-149169/
+- The [Background picture](./assets/images/sfondo_api.jpg) on the game area is from Pixabay by Buntysmum: https://pixabay.com/images/id-4971985/
 
----
+### Disclaimer
 
-Happy coding!
+The information provided on this site is intended for educational purposes only.
