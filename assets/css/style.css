@@ -30,9 +30,9 @@ h1, p {
 
 #game-area {
     background-image: url(../images/sfondo_api.jpg);
-    background-size: auto;
+    background-size: cover;
     width: 90%;
-    height: 600px;
+    height: 500px;
     margin: auto;
     padding: 50px 0;
 }
@@ -44,15 +44,16 @@ h1, p {
     border: 1px solid black;
     background-color: white;
     overflow: hidden;
+    position: relative;
 }
 
 #bee {
     width: 50px;
-    height: 50px;
+    height: 41px;
     background-image: url('../images/bee.png');
-    background-size: 50px 50px;
-    position: relative;
-    bottom: -50px;
+    background-size: cover;
+    position: absolute;
+    bottom: 100px;
 }
 
 .animate {
@@ -60,21 +61,22 @@ h1, p {
 }
 
 @keyframes jump {
-    0%{bottom: -50px;}
-    30%{bottom: -90px;}
-    50%{bottom: -100px;}
-    70%{bottom: -90px;}
-    100%{bottom: -50px;}
+    0%{bottom: 100px;}
+    30%{bottom: 70px;}
+    50%{bottom: 50px;}
+    70%{bottom: 70px;}
+    100%{bottom: 100px;}
 }
 
 #daisy {
-    width: 40px;
-    height: 100px;
+    width: 50px;
+    height: 73px;
     background-image: url(../images/daisy.png);
-    background-size: 40px 100px;
-    position: relative;
-    top: 50px;
+    background-size: cover;
+    position: absolute;
+    bottom: 0px;
     left: 480px; 
+    visibility: hidden;
 }
 
 .ground {
@@ -83,22 +85,5 @@ h1, p {
 
 @keyframes daisy {
     0%{left: 480px;}
-    100%{left: -40px}
-}
-
-
-#purple-daisy {
-    width: 20px;
-    height: 50px;
-    background-image: url(../images/purple-daisy.png);
-    background-size: 20px 50px;
-    position: relative;
-    top: 100px;
-    left: 700px;
-    animation: daisy 3s infinite linear;
-}
-
-@keyframes purple-daisy {
-    0%{left: 700px;}
-    100%{left: -40px}
+    100%{left: -50px}
 }

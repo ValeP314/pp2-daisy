@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+    <!-- favicon -->
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 
     <title>Daisy Game</title>
     <link rel="stylesheet" href="assets/css/style.css">
@@ -16,7 +18,9 @@
 <body>
     <div id="intro">
         <h1>The Daisy Game <i class="fa-brands fa-forumbee"></i></h1>
+        <br>
         <p>Help our industrious bee to land on as many flowers as possible!</p>
+        <br>
         <p id="start">Click below to start!</p>
     </div>
     <div id="game-area">
@@ -26,11 +30,14 @@
             <div id="bee"></div>
             <div id="daisy"></div>
         </div>
+
+        <button id="fly-down">Fly down!</button>
     </div>
     <div id="scores">Score: <span id="score">0</span></div>
-    <div id="timer">Timer:  <span id="counter">60</span> seconds</div>
+    <div id="timer">Timer:  <span id="counter">0</span> seconds</div>
 </body>
 <script src="assets/js/script.js"></script>
+<!-- alerts -->
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <!-- font awesome script-->
 <script src="https://kit.fontawesome.com/68e9759d6c.js" crossorigin="anonymous"></script>
