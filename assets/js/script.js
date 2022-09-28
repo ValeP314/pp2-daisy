@@ -44,9 +44,64 @@ function fly(){
   },500)
 }
 
-function checkCollision (){}
+function checkCollision (){
+  /*
+  //set interval to check position
+  var collision = false;
+  let checkLand = setInterval(function() {
 
-function incrementScore (){}
+    // get current bee Y position
+    let beeBottom = parseInt(window.getComputedStyle(bee).getPropertyValue("bottom"));
+  
+    // get current flower X position
+    let daisyLeft = parseInt(window.getComputedStyle(daisy).getPropertyValue("left"));
+
+    // detect collision and increment score
+    let score = 0;
+    if (daisyLeft<50 && daisyLeft>0 && beeBottom<=50) {
+      collision = true;
+      console.log(collision);
+      incrementScore();
+    } else{
+      collision = false;
+    }
+    
+  }, 25);
+*/
+
+/*
+  let checkLand = setInterval(function (){
+  let beeCoord = bee.getBoundingClientRect();
+  console.log(beeCoord)
+  let daisyCoord = daisy.getBoundingClientRect();
+  console.log(daisyCoord)
+  
+  let beeLeftOfDaisy = (beeCoord.x + beeCoord.width) < daisyCoord.x;
+  let beeRightofDaisy = beeCoord.x > (daisyCoord.x + daisyCoord.width);
+  let beeAboveDaisy = (beeCoord.y + beeCoord.height) < daisyCoord.y;
+  let beeBelowDaisy = beeCoord.y > (daisyCoord.y + daisyCoord.height);
+  var collision = false;
+  console.log (beeLeftOfDaisy,beeRightofDaisy,beeAboveDaisy, beeBelowDaisy)
+
+  if (!(beeLeftOfDaisy || beeRightofDaisy || beeAboveDaisy || beeBelowDaisy)) {
+    collision = true;
+  } else {
+    collision = false;
+  }
+
+  console.log(collision);
+  
+  incrementScore();
+
+}, 25);
+*/
+}
+
+function incrementScore (){
+  let oldScore = parseInt(document.getElementById("score").innerText);
+  
+  document.getElementById("score").innerText = ++oldScore;
+}
 
 // set 1-minute timer to establish max time
 var seconds = 59;
