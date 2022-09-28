@@ -45,7 +45,7 @@ function fly(){
 }
 
 function checkCollision (){
-  /*
+  
   //set interval to check position
   var collision = false;
   let checkLand = setInterval(function() {
@@ -67,7 +67,7 @@ function checkCollision (){
     }
     
   }, 25);
-*/
+
 
 /*
   let checkLand = setInterval(function (){
@@ -144,8 +144,9 @@ function gameOver (){
   playButton.style.visibility = "visible"
   playButton.innerHTML = "Play again";
   
-  // Add event listener to Start button to start the game
-  playButton.addEventListener("click", startGame);
-  startGame();
+  
 }
 
+// Add event listener to Start button to start the game
+playButton.addEventListener("click", startGame);
+  startGame();
