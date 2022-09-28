@@ -5,8 +5,8 @@ const daisy = document.getElementById("daisy");
 
 // Wait for the DOM to finish loading before running the game
 document.addEventListener("DOMContentLoaded", function() {
-  // Add event listener to Start button to start the game
-  playButton.addEventListener("click", startGame);
+// Add event listener to Start button to start the game
+playButton.addEventListener("click", startGame);
 })
 
 function startGame(){
@@ -17,11 +17,12 @@ function startGame(){
     daisy.style.visibility = "visible";  
   }
 
+  // Change the text on the paragraph and the button
+  document.getElementById("start").innerHTML = "Let's play!";
+  playButton.style.visibility = "hidden";
+
   // Enable the bee to fly adding an event listener for a key down
   flyDown.addEventListener("click", fly);
-  // Change the text on the paragraph and the button
-  document.getElementById("start").innerHTML = "Click below to reset the game";
-  playButton.innerHTML = "Reset";
 
   // Starts the animation of the daisies
   daisy.classList.add("ground");
@@ -77,5 +78,19 @@ function clock (){
       }
 }
 
-function resetGame (){}
+function gameOver (){
+  // stop flowers and reset the timer
+  bee.style.display = "none"  
+  daisy.style.animation = "none";
+  daisy.style.display = "none";
+  
+  // Change the text on the paragraph and the button
+  document.getElementById("start").innerHTML = "Click below to play again";
+  playButton.style.visibility = "visible"
+  playButton.innerHTML = "Play again";
+  
+  // Add event listener to Start button to start the game
+  playButton.addEventListener("click", startGame);
+  startGame();
+}
 
