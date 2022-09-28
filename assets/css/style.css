@@ -22,10 +22,14 @@ h1, p {
 }
 
 #button {
-    background-color: white;
+    background-color: #ff9d09;
     width: 100px;
     height: 30px;
     font-weight: bolder;
+}
+
+#button:hover {
+    color: white;
 }
 
 #game-area {

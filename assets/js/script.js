@@ -3,7 +3,8 @@ const flyDown = document.getElementById("fly-down");
 const bee = document.getElementById("bee");
 const daisy = document.getElementById("daisy");
 const scoreDisplay = document.getElementById("score");
-let seconds = 10;
+const timeDisplay = document.getElementById("counter");
+
 let timer;
 
 // Wait for the DOM to finish loading before running the game
@@ -26,6 +27,10 @@ function startGame(){
   bee.style.display = ""  
   daisy.style.animation = "";
   daisy.style.display = "";  
+  let seconds = 10;
+  
+  // Starts the countdown
+  startCountDown();
 
   // Change the text on the paragraph and the button
   document.getElementById("start").innerHTML = "Let's play!";
@@ -36,9 +41,6 @@ function startGame(){
 
   // Starts the animation of the daisies
   daisy.classList.add("ground");
-
-  // Starts the countdown
-  startCountDown();
 
   // Add the collision detection
   checkCollision ();
@@ -73,7 +75,7 @@ function checkCollision (){
     let daisyBottom = parseInt(window.getComputedStyle(daisy).getPropertyValue("bottom"));
 
     // detect collision and increment score
-    if (daisyLeft<beeRight && daisyRight>beeLeft && beeBottom<(daisyBottom + daisyHeight)) {
+    if (daisyLeft<beeRight && daisyRight>beeLeft && beeBottom<(daisyBottom + daisyHeight) && daisyLeft<50) {
       collision = true;
       console.log(collision);
       incrementScore();
@@ -81,35 +83,8 @@ function checkCollision (){
       collision = false;
     }
     
-  }, 25);
+  }, 50);
 
-
-/*
-  let checkLand = setInterval(function (){
-  let beeCoord = bee.getBoundingClientRect();
-  console.log(beeCoord)
-  let daisyCoord = daisy.getBoundingClientRect();
-  console.log(daisyCoord)
-  
-  let beeLeftOfDaisy = (beeCoord.x + beeCoord.width) < daisyCoord.x;
-  let beeRightofDaisy = beeCoord.x > (daisyCoord.x + daisyCoord.width);
-  let beeAboveDaisy = (beeCoord.y + beeCoord.height) < daisyCoord.y;
-  let beeBelowDaisy = beeCoord.y > (daisyCoord.y + daisyCoord.height);
-  var collision = false;
-  console.log (beeLeftOfDaisy,beeRightofDaisy,beeAboveDaisy, beeBelowDaisy)
-
-  if (!(beeLeftOfDaisy || beeRightofDaisy || beeAboveDaisy || beeBelowDaisy)) {
-    collision = true;
-  } else {
-    collision = false;
-  }
-
-  console.log(collision);
-  
-  incrementScore();
-
-}, 25);
-*/
 }
 
 function incrementScore (){
@@ -129,17 +104,18 @@ function startCountDown (){
 //add alert when the time is up
 function clock (){
     if (seconds < 60) {
-        document.getElementById("counter").innerHTML = seconds;
+        timeDisplay.innerHTML = seconds;
       }
       if (seconds > 0) {
         seconds--;
       } else {
-        clearInterval(timer);
+        
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
           text: 'Game over!',
         });
+        clearInterval(timer);
         gameOver();
       }
 }
