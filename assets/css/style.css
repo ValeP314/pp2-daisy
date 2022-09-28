@@ -87,3 +87,21 @@ h1, p {
     0%{left: 480px;}
     100%{left: -50px}
 }
+
+/* Small screen size from 600px and below */
+
+@media screen and (max-width: 600px) {
+    #field {
+        width: 300px;
+    }
+
+    #daisy {
+        left: 280px;
+    }
+
+    @keyframes daisy {
+        0%{left: 280px;}
+        100%{left: -50px}
+    }
+
+}
