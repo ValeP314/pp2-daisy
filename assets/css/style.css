@@ -32,6 +32,7 @@ h1, p {
     text-align: center;
     cursor: pointer;
     font-weight: bolder;
+    color: black;
 }
 
 #game-area {
@@ -104,6 +105,7 @@ h1, p {
     background-color: #ff9d09;
     text-align: center;
     cursor: pointer;
+    color: black;
 }
 
 /* Small screen size from 600px and below */

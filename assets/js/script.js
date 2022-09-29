@@ -129,14 +129,13 @@ function clock (){
 
 function gameOver (){
   // Remove flowers and bee from the game area
-  bee.style.display = "none"  
+  bee.style.display = "none";
   daisy.style.animation = "none";
   daisy.style.display = "none";
   
   // Change the text on the paragraph and the button
   document.getElementById("start").innerHTML = "Click below to play again";
-  playButton.style.visibility = "visible"
-  playButton.innerHTML = "Play again";
+  playButton.style.visibility = "visible";
 
   // Clear collisions 
   clearInterval(checkLand);
