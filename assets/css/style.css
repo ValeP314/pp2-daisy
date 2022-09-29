@@ -22,14 +22,16 @@ h1, p {
 }
 
 #button {
+    height: 50px;
+    line-height: 50px;  
+    width: 50px;  
+    font-size: 2em;
+    font-weight: bold;
+    border-radius: 50%;
     background-color: #ff9d09;
-    width: 100px;
-    height: 30px;
+    text-align: center;
+    cursor: pointer;
     font-weight: bolder;
-}
-
-#button:hover {
-    color: white;
 }
 
 #game-area {
@@ -92,6 +94,18 @@ h1, p {
     100%{left: -50px}
 }
 
+#fly-down {
+    height: 50px;
+    line-height: 50px;  
+    width: 50px;  
+    font-size: 2em;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: #ff9d09;
+    text-align: center;
+    cursor: pointer;
+}
+
 /* Small screen size from 600px and below */
 
 @media screen and (max-width: 600px) {
@@ -113,7 +127,7 @@ h1, p {
     }
 }
 
-/* Small screen size from 350px and below */
+/* Smaller screen size from 350px and below */
 
 @media screen and (max-width: 350px) {
     #field {
@@ -131,5 +145,9 @@ h1, p {
 
     #game-area {
         height: 350px;
+    }
+
+    #field {
+        margin: 30px auto;
     }
 }
