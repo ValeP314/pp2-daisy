@@ -13,7 +13,7 @@ let checkLand;
 document.addEventListener("DOMContentLoaded", function() {
 // Add event listener to Start button to start the game
 playButton.addEventListener("click", startGame);
-})
+});
 
 function startGame(){
 
@@ -27,7 +27,7 @@ function startGame(){
   //Reset the game-area, in case this is a game restart
   score = 0;
   scoreDisplay.innerText = score;
-  bee.style.display = ""  
+  bee.style.display = "";
   daisy.style.animation = "";
   daisy.style.display = "";  
   seconds = 59;
@@ -59,7 +59,7 @@ function fly(){
     if (bee.classList.contains ("animate")){
       bee.classList.remove("animate");
     }
-  },500)
+  },500);
 }
 
 function checkCollision (){
@@ -85,7 +85,7 @@ function checkCollision (){
       console.log(collision);
       beeBottom = 50;
       incrementScore();
-    } else{
+    } else {
       collision = false;
     }
     
@@ -94,10 +94,8 @@ function checkCollision (){
 }
 
 function incrementScore (){
-  if (collision = true) {
     score += 1;
     scoreDisplay.innerText = score;
-  }
 }
 
 // set 1-minute timer to establish max time

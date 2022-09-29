@@ -108,6 +108,14 @@ h1, p {
     color: black;
 }
 
+#scores {
+    padding-top: 10px;
+}
+
+#scores, #timer {
+    font-weight: bold;
+}
+
 /* Small screen size from 600px and below */
 
 @media screen and (max-width: 600px) {
