@@ -108,4 +108,28 @@ h1, p {
         100%{left: -50px}
     }
 
+    #game-area {
+        height: 400px;
+    }
+}
+
+/* Small screen size from 350px and below */
+
+@media screen and (max-width: 350px) {
+    #field {
+        width: 200px;
+    }
+
+    #daisy {
+        left: 180px;
+    }
+
+    @keyframes daisy {
+        0%{left: 180px;}
+        100%{left: -50px}
+    }
+
+    #game-area {
+        height: 350px;
+    }
 }
