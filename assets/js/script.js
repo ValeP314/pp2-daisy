@@ -4,8 +4,10 @@ const bee = document.getElementById("bee");
 const daisy = document.getElementById("daisy");
 const scoreDisplay = document.getElementById("score");
 const timeDisplay = document.getElementById("counter");
-
+let seconds = 59;
 let timer;
+let score;
+let checkLand;
 
 // Wait for the DOM to finish loading before running the game
 document.addEventListener("DOMContentLoaded", function() {
@@ -14,6 +16,7 @@ playButton.addEventListener("click", startGame);
 })
 
 function startGame(){
+
   // Shows the first daisy on screen, as hidden from CSS
   if (daisy.style.visibility === "hidden") {
     daisy.style.visibility = "visible";
@@ -27,10 +30,12 @@ function startGame(){
   bee.style.display = ""  
   daisy.style.animation = "";
   daisy.style.display = "";  
-  let seconds = 10;
+  seconds = 59;
+  timeDisplay.innerText = seconds;
+  timer = null;
   
   // Starts the countdown
-  startCountDown();
+  startCountDown ();
 
   // Change the text on the paragraph and the button
   document.getElementById("start").innerHTML = "Let's play!";
@@ -61,7 +66,7 @@ function checkCollision (){
   
   //set interval to check position
   let collision = false;
-  let checkLand = setInterval(function() {
+  checkLand = window.setInterval(function() {
 
     // get current bee X and Y position
     let beeBottom = parseInt(window.getComputedStyle(bee).getPropertyValue("bottom"));
@@ -75,9 +80,10 @@ function checkCollision (){
     let daisyBottom = parseInt(window.getComputedStyle(daisy).getPropertyValue("bottom"));
 
     // detect collision and increment score
-    if (daisyLeft<beeRight && daisyRight>beeLeft && beeBottom<(daisyBottom + daisyHeight) && daisyLeft<50) {
+    if (daisyLeft<beeRight && daisyRight>beeLeft && beeBottom<(daisyBottom + daisyHeight - 20) && daisyLeft<50) {
       collision = true;
       console.log(collision);
+      beeBottom = 50;
       incrementScore();
     } else{
       collision = false;
@@ -88,8 +94,10 @@ function checkCollision (){
 }
 
 function incrementScore (){
-  score += 1;
-  scoreDisplay.innerText = score;
+  if (collision = true) {
+    score += 1;
+    scoreDisplay.innerText = score;
+  }
 }
 
 // set 1-minute timer to establish max time
@@ -109,7 +117,6 @@ function clock (){
       if (seconds > 0) {
         seconds--;
       } else {
-        
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
@@ -121,7 +128,7 @@ function clock (){
 }
 
 function gameOver (){
-  // stop flowers and reset the timer
+  // Remove flowers and bee from the game area
   bee.style.display = "none"  
   daisy.style.animation = "none";
   daisy.style.display = "none";
@@ -130,4 +137,7 @@ function gameOver (){
   document.getElementById("start").innerHTML = "Click below to play again";
   playButton.style.visibility = "visible"
   playButton.innerHTML = "Play again";
+
+  // Clear collisions 
+  clearInterval(checkLand);
 }
