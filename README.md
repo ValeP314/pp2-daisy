@@ -98,7 +98,7 @@ None
   - From the Branch section drop-down menu, select the Main Branch.
   - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-  The live link can be found here - [DaisyGame](https://valep314.github.io...)
+  The live link can be found here - [The Daisy Game](https://valep314.github.io/pp2-daisy/)
 
 
 ## Credits  
@@ -108,7 +108,7 @@ None
 - The main structure and the README file are inspired to the Love Running and Love Maths projects.
 - The icon in the heading was taken from [Font Awesome](https://fontawesome.com/)
 - Inspiration on the coding for structure of the game came from this video from KnifeCircus [KnifeCircus](https://www.youtube.com/watch?v=bG2BmmYr9NQ)
-- [W3 School](https://www.w3schools.com/) was consulted regularly for tips on general coding, as well as [Stack Overflow] (https://stackoverflow.com/).
+- [W3 School](https://www.w3schools.com/) was consulted regularly for tips on general coding, as well as [Stackoverflow] (https://stackoverflow.com/).
 
 
 ### Media

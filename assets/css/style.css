@@ -125,6 +125,10 @@ h1, p {
     #game-area {
         height: 400px;
     }
+
+    .ground {
+        animation: daisy 2s infinite linear;
+    }
 }
 
 /* Smaller screen size from 350px and below */
@@ -144,10 +148,15 @@ h1, p {
     }
 
     #game-area {
-        height: 350px;
+        height: 330px;
+        padding: 20px 0;
     }
 
     #field {
-        margin: 30px auto;
+        margin: 10px auto;
+    }
+
+    .ground {
+        animation: daisy 1500ms infinite linear;
     }
 }
